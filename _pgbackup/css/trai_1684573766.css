@@ -231,8 +231,7 @@ body {
 
 .outlined-button:hover {
     border-width: 3px;
-    box-shadow: 0 0 0 3px #D834FF;
-    color: #D834FF;
+    box-shadow: 0 0 0 3px var(--primary-green-100);
 }
 
 .nav {
