@@ -2166,7 +2166,7 @@ li {
         -webkit-box-direction: normal;
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
     .s4-info-container {

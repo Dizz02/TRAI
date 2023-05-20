@@ -44,3 +44,17 @@ Webflow.require('ix2').init(
 );
 
 
+// Assuming you have an h1 element with the class "h1"
+var h1Element = document.querySelector(".h1");
+
+// Splitting the text into an array of words
+var words = h1Element.textContent.trim().split(" ");
+
+// Adding the ".boujee-text" class to the first word
+words[0] = "<span class=\"boujee-text\">" + words[0] + "</span>";
+
+// Joining the words back into a single string
+var modifiedText = words.join(" ");
+
+// Updating the HTML content of the h1 element with the modified text
+h1Element.innerHTML = modifiedText;

@@ -145,6 +145,10 @@ body {
     margin-bottom: 30px;
 }
 
+.p.is-s7-p {
+    margin-bottom: 30px;
+}
+
 .p.is-404-p {
     margin-bottom: 30px;
 }
@@ -771,6 +775,50 @@ body {
 }
 
 .s6-info-container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 50%;
+    padding-right: 50px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.s7 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.s7-container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 90%;
+}
+
+.s7-info-container {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1426,6 +1474,15 @@ body {
     z-index: 200;
 }
 
+.s7-cat-image {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    z-index: 200;
+}
+
 .s4-base-image {
     position: absolute;
     left: 0%;
@@ -1612,6 +1669,59 @@ body {
 }
 
 .s6-rocket-image {
+    position: relative;
+    z-index: 1;
+}
+
+.s7-image-wrapper {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 50px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.s7-image-container {
+    position: relative;
+}
+
+.s7-message-image {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    z-index: 200;
+}
+
+.s7-card-image {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    z-index: 100;
+}
+
+.s7-rocket-image {
     position: relative;
     z-index: 1;
 }
@@ -2166,7 +2276,7 @@ li {
         -webkit-box-direction: normal;
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
     .s4-info-container {
@@ -2721,7 +2831,7 @@ li {
     --bg-size: 400%;
     --color-one: #0A84FF;
     --color-two: #D834FF;
-    font-size: 3.8rem;
+    font-size: 32px;
     line-height: 1;
     letter-spacing: -.02em;
     background: linear-gradient( 90deg, var(--color-one), var(--color-two), var(--color-one) ) 0 0 / var(--bg-size) 100%;
@@ -2736,12 +2846,42 @@ li {
     .boujee-text {
         animation: move-bg 8s linear infinite;
         font-weight: 800;
-        font-size: 68px;
+        font-size: 31px;
     }
 
     @keyframes move-bg {
         to {
             background-position: var(--bg-size) 0;
         }
+    }
+}
+
+@media (max-width: 767px) {
+    .s3-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 767px) {
+    .s4-container {
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 767px) {
+    .s5-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 767px) {
+    .s6-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 767px) {
+    .s7-container {
+        flex-direction: column-reverse;
     }
 }
