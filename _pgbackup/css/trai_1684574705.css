@@ -2847,7 +2847,7 @@ li {
     .boujee-text {
         animation: move-bg 8s linear infinite;
         font-weight: 800;
-        font-size: 62px;
+        font-size: 31px;
     }
 
     @keyframes move-bg {
