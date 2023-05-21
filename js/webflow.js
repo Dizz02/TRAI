@@ -62,6 +62,8 @@ h1Element.innerHTML = modifiedText;
 
 var Slider = function () {
     var total, $slide, $slider, sliderWidth, increment = 120;
+    var startX, currentX, deltaX, dragging = false;
+
     var on = function () {
         $slider = $('.slider');
         $slide = $('.slide');
@@ -120,15 +122,70 @@ var Slider = function () {
         position();
     }
 
-    var clickedImage = function () {
-        $('.active').removeClass('active');
-        $(this).addClass('active');
+    var startDrag = function (event) {
+        if (event.touches) {
+            startX = event.touches[0].clientX;
+        } else {
+            startX = event.clientX;
+            $(document).on('mousemove', drag);
+            $(document).on('mouseup', stopDrag);
+        }
+        dragging = true;
+    }
+
+    var drag = function (event) {
+        event.preventDefault();
+        if (dragging) {
+            if (event.touches) {
+                currentX = event.touches[0].clientX;
+            } else {
+                currentX = event.clientX;
+            }
+            deltaX = currentX - startX;
+        }
+    }
+
+    var stopDrag = function () {
+        if (dragging) {
+            if (deltaX < -50) {
+                nextSlide();
+            } else if (deltaX > 50) {
+                prevSlide();
+            }
+            dragging = false;
+            startX = 0;
+            currentX = 0;
+            deltaX = 0;
+            $(document).off('mousemove', drag);
+            $(document).off('mouseup', stopDrag);
+        }
+    }
+
+    var nextSlide = function () {
+        var $activeSlide = $('.active');
+        var $nextSlide = $activeSlide.next('.slide');
+        if ($nextSlide.length > 0) {
+            $activeSlide.removeClass('active');
+            $nextSlide.addClass('active');
+        }
+        position();
+    }
+
+    var prevSlide = function () {
+        var $activeSlide = $('.active');
+        var $prevSlide = $activeSlide.prev('.slide');
+        if ($prevSlide.length > 0) {
+            $activeSlide.removeClass('active');
+            $prevSlide.addClass('active');
+        }
         position();
     }
 
     var addEvents = function () {
         $(window).resize(recalculateSizes);
-        $(document).on('click touchstart', '.slide', clickedImage);
+        $slider.on('touchstart mousedown', startDrag);
+        $slider.on('touchmove mousemove', drag);
+        $slider.on('touchend mouseup', stopDrag);
     }
 
     return {
@@ -139,11 +196,11 @@ var Slider = function () {
             $('.slide').first().addClass('active');
 
             position();
-
         }
     };
 }();
 
 $(function () {
     var slider = Slider.init();
-})
+});
+
