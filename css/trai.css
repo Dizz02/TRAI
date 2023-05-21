@@ -2976,7 +2976,7 @@ p, a, ul li {
 }
 
 /* Adjust styles for mobile devices */
-@media (max-width: 767px) {
+@media (max-width: 360px) {
     .main-title {
         font-size: 24px;
     }
@@ -2984,14 +2984,14 @@ p, a, ul li {
     .slider {
         margin: 40px 0;
         height: auto;
-        width: 100%;
+        width: 90%;
         overflow: hidden;
         white-space: nowrap;
     }
 
     .slide {
-        margin: 0 10px;
-        width: auto;
+        margin: 0 0px;
+        width: 90%;
         display: inline-block;
         position: relative;
         transition: .4s all;
