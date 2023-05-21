@@ -128,7 +128,7 @@ var Slider = function () {
 
     var addEvents = function () {
         $(window).resize(recalculateSizes);
-        $(document).on('click', '.slide', clickedImage);
+        $(document).on('click touchstart', '.slide', clickedImage);
     }
 
     return {
