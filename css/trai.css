@@ -2984,7 +2984,7 @@ p, a, ul li {
     .slider {
         margin: 40px 0;
         height: auto;
-        width: 90%;
+        width: 100%;
         overflow: hidden;
         white-space: nowrap;
     }
