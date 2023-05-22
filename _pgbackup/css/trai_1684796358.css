@@ -182,6 +182,7 @@ body {
     font-weight: 500;
 }
 
+
 .filled-button2 {
     display: -webkit-box;
     display: -webkit-flex;
@@ -200,7 +201,7 @@ body {
     align-items: center;
     border-radius: 100px;
     background-color: var(--primary-linear-gradient);
-    background-image: linear-gradient(to left, #6e6b6b, #6e6b6b);
+    background-image: linear-gradient(to left, #D834FF, #0A84FF);
     background-clip: text;
     -webkit-transition: box-shadow 300ms ease;
     transition: box-shadow 300ms ease;
@@ -239,7 +240,6 @@ body {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    margin-left: 50px;
 }
 
 .outlined-button {
@@ -1076,7 +1076,6 @@ body {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    justify-content: center;
 }
 
 .logo-block {
@@ -3052,11 +3051,9 @@ ul li {
 
     .slide {
         margin: 0 10px;
-
         /* Adjust the margin as per your preference */
         flex: 0 0 auto;
         max-width: 250px;
-
         /* Adjust the max-width as per your preference */
         position: relative;
         transition: .4s all;
@@ -3068,7 +3065,6 @@ ul li {
         background-origin: border-box;
         background-clip: content-box, border-box;
         scroll-snap-align: center;
-
         /* Snap slides to the center */
     }
 
@@ -3103,6 +3099,8 @@ ul li {
     color: #fff;
     text-decoration: none;
 }
+
+
 
 /* Hide the specified part on desktop */
 @media (min-width: 481px) {
