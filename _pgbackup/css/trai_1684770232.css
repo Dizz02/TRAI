@@ -2870,7 +2870,10 @@ li {
     .s3-container {
         flex-direction: column;
     }
+
 }
+
+
 
 @media (max-width: 767px) {
     .s4-container {
@@ -2896,6 +2899,7 @@ li {
     }
 }
 
+
 @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@400;700&family=Outfit:wght@400;600;700&display=swap');
 
 h1,
@@ -2905,8 +2909,6 @@ h4,
 h5,
 h6 {
     font-family: 'Outfit', sans-serif;
-    font-size: 20px;
-    text-align: left;
 }
 
 p,
@@ -2914,9 +2916,7 @@ a,
 ul li {
     font-family: 'Dongle', sans-serif;
     font-weight: 400;
-    font-size: 17px;
-    text-align: left;
-    text-transform: none;
+    font-size: 20px;
 }
 
 .main-title {
@@ -2932,6 +2932,7 @@ ul li {
     perspective: 1000px;
     position: relative;
     width: 100vw;
+    
 }
 
 .slide {
@@ -2995,26 +2996,18 @@ ul li {
         -webkit-overflow-scrolling: touch;
         -ms-overflow-style: none;
         scrollbar-width: none;
-        justify-content: center;
-
-        /* Center the slides */
-        scroll-snap-type: x mandatory;
-
-        /* Enable scroll snapping */
+        justify-content: center; /* Center the slides */
+        scroll-snap-type: x mandatory; /* Enable scroll snapping */
     }
 
-    .slider::-webkit-scrollbar {
-        display: none;
-    }
+        .slider::-webkit-scrollbar {
+            display: none;
+        }
 
     .slide {
-        margin: 0 10px;
-
-        /* Adjust the margin as per your preference */
+        margin: 0 10px; /* Adjust the margin as per your preference */
         flex: 0 0 auto;
-        max-width: 250px;
-
-        /* Adjust the max-width as per your preference */
+        max-width: 250px; /* Adjust the max-width as per your preference */
         position: relative;
         transition: .4s all;
         border-radius: 10px;
@@ -3024,9 +3017,7 @@ ul li {
         background-image: linear-gradient(#0200546b, #0000006b), linear-gradient(to right, #661dee73, #009dff75);
         background-origin: border-box;
         background-clip: content-box, border-box;
-        scroll-snap-align: center;
-
-        /* Snap slides to the center */
+        scroll-snap-align: center; /* Snap slides to the center */
     }
 
     .slide-container {
@@ -3034,14 +3025,17 @@ ul li {
     }
 }
 
+
+
+
 .btn-grad {
     background-image: linear-gradient(#0200546b, #0000006b), linear-gradient(to right, #661dee73, #009dff75);
     background-origin: border-box;
     margin: 0 10px;
     flex: 0 0 auto;
     padding: 15px 45px;
-    max-width: 345px;
-    max-height: 150px;
+    max-width: 250px;
+    max-height: 100px;
     text-align: center;
     text-transform: uppercase;
     transition: 0.5s;
@@ -3051,19 +3045,11 @@ ul li {
     display: block;
 }
 
-.btn-grad:hover {
-    background-position: right center;
-
-    /* change the direction of the change here */
-    color: #fff;
-    text-decoration: none;
-}
-
-
-
-/* Hide the specified part on desktop */
-@media (min-width: 481px) {
-    .align-content-center.d-flex {
-        display: none;
+    .btn-grad:hover {
+        background-position: right center; /* change the direction of the change here */
+        color: #fff;
+        text-decoration: none;
     }
-}
+         
+
+
