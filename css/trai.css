@@ -3002,7 +3002,7 @@ ul li {
         -webkit-overflow-scrolling: touch;
         -ms-overflow-style: none;
         scrollbar-width: none;
-        justify-content: center; /* Center the slides */
+        justify-content: flex-start; /* Center the slides */
     }
 
         .slider::-webkit-scrollbar {
