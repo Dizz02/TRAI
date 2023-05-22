@@ -70,10 +70,17 @@ var Slider = function () {
         sliderWidth = $slider.width();
         total = $slide.length;
         position();
-    }
+    };
 
     var position = function () {
-        var sign, half = $('.active').index(), x = 0, z = 0, zindex, scaleX = 1.3, scaleY = 1.3, transformOrigin;
+        var sign,
+            half = $('.active').index(),
+            x = 0,
+            z = 0,
+            zindex,
+            scaleX = 1.3,
+            scaleY = 1.3,
+            transformOrigin;
         $slide.each(function (index, element) {
             scaleX = scaleY = 1;
             transformOrigin = sliderWidth / 2;
@@ -83,7 +90,7 @@ var Slider = function () {
                 x = sliderWidth / 2 - increment * (half - index + 1);
                 z = -increment * (half - index + 1);
             } else if (index > half) {
-                sign = -1
+                sign = -1;
                 zindex = total - index;
                 x = sliderWidth / 2 + increment * (index - half + 1);
                 z = -increment * (index - half + 1);
@@ -95,43 +102,51 @@ var Slider = function () {
                 scaleX = scaleY = 1.2;
                 transformOrigin = 'initial';
             }
-            $(element).css(
-                {
-                    'transform': 'translate3d(' + calculateX(x, sign, 300) + 'px, 0,' + z + 'px) scale3d(' + scaleX + ',' + scaleY + ', 1)',
-                    'z-index': zindex,
-                    'transform-origin-x': transformOrigin
-                }
-            );
+            $(element).css({
+                transform:
+                    'translate3d(' +
+                    calculateX(x, sign, 300) +
+                    'px, 0,' +
+                    z +
+                    'px) scale3d(' +
+                    scaleX +
+                    ',' +
+                    scaleY +
+                    ', 1)',
+                'z-index': zindex,
+                'transform-origin-x': transformOrigin,
+            });
         });
     };
 
     var calculateX = function (position, sign, width) {
         switch (sign) {
             case 1:
-            case 0: return position - width / 2;
-            case -1: return position - width / 2;
+            case 0:
+                return position - width / 2;
+            case -1:
+                return position - width / 2;
         }
-    }
+    };
 
     var imageSize = function () {
         return $slider.width() / 3;
-    }
+    };
 
     var recalculateSizes = function () {
         sliderWidth = $slider.width();
         position();
-    }
+    };
 
     var startDrag = function (event) {
+        event.preventDefault();
         if (event.touches) {
             startX = event.touches[0].clientX;
         } else {
             startX = event.clientX;
-            $(document).on('mousemove', drag);
-            $(document).on('mouseup', stopDrag);
         }
         dragging = true;
-    }
+    };
 
     var drag = function (event) {
         event.preventDefault();
@@ -143,7 +158,7 @@ var Slider = function () {
             }
             deltaX = currentX - startX;
         }
-    }
+    };
 
     var stopDrag = function () {
         if (dragging) {
@@ -156,10 +171,8 @@ var Slider = function () {
             startX = 0;
             currentX = 0;
             deltaX = 0;
-            $(document).off('mousemove', drag);
-            $(document).off('mouseup', stopDrag);
         }
-    }
+    };
 
     var nextSlide = function () {
         var $activeSlide = $('.active');
@@ -169,7 +182,7 @@ var Slider = function () {
             $nextSlide.addClass('active');
         }
         position();
-    }
+    };
 
     var prevSlide = function () {
         var $activeSlide = $('.active');
@@ -179,14 +192,14 @@ var Slider = function () {
             $prevSlide.addClass('active');
         }
         position();
-    }
+    };
 
     var addEvents = function () {
         $(window).resize(recalculateSizes);
         $slider.on('touchstart mousedown', startDrag);
-        $slider.on('touchmove mousemove', drag);
-        $slider.on('touchend mouseup', stopDrag);
-    }
+        $(document).on('touchmove mousemove', drag);
+        $(document).on('touchend mouseup', stopDrag);
+    };
 
     return {
         init: function () {
@@ -196,11 +209,12 @@ var Slider = function () {
             $('.slide').first().addClass('active');
 
             position();
-        }
+        },
     };
 }();
 
 $(function () {
     var slider = Slider.init();
 });
+
 
