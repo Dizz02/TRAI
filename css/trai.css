@@ -442,7 +442,6 @@ body {
     opacity: 0.95;
 }
 
-
 .s1-gradient-glow.is-green-gradient-glow {
     background-image: -webkit-gradient(linear, left top, right top, from #fff 0%), color-stop(50%, #fff), to(var(--primary-green-100) 0%));
     background-image: linear-gradient(90deg, #fff 0%, #fff 50%, #fff 0%);
@@ -2573,7 +2572,7 @@ li {
     }
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 459px) {
     .hero-wrapper {
         padding-top: 175px;
         padding-bottom: 300px;
@@ -2899,13 +2898,18 @@ li {
 
 @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@400;700&family=Outfit:wght@400;600;700&display=swap');
 
-
-
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Outfit', sans-serif;
 }
 
-p, a, ul li {
+p,
+a,
+ul li {
     font-family: 'Dongle', sans-serif;
     font-weight: 400;
     font-size: 20px;
@@ -2947,30 +2951,35 @@ p, a, ul li {
     padding: 20px 30px;
 }
 
-    .slide-container ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
+.slide-container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
-        .slide-container ul li {
-            padding: 0;
-        }
+.slide-container ul li {
+    padding: 0;
+}
 
 .slide.active {
     z-index: 4;
 }
 
-
 /* Add this CSS for responsive styling */
-
 /* Adjust font sizes for mobile devices */
 @media (max-width: 767px) {
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         font-size: 18px;
     }
 
-    p, a, ul li {
+    p,
+    a,
+    ul li {
         font-size: 16px;
     }
 }
