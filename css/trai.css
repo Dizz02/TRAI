@@ -2572,7 +2572,7 @@ li {
     }
 }
 
-@media screen and (max-width: 459px) {
+@media screen and (max-width: 439px) {
     .hero-wrapper {
         padding-top: 175px;
         padding-bottom: 300px;
@@ -2870,7 +2870,10 @@ li {
     .s3-container {
         flex-direction: column;
     }
+
 }
+
+
 
 @media (max-width: 767px) {
     .s4-container {
@@ -2895,6 +2898,7 @@ li {
         flex-direction: column-reverse;
     }
 }
+
 
 @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@400;700&family=Outfit:wght@400;600;700&display=swap');
 
