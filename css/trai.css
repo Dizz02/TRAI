@@ -3035,8 +3035,9 @@ ul li {
 }
 
 .btn-grad {
-    background-image: linear-gradient(#0200546b, #0000006b), linear-gradient(to right, #661dee73, #009dff75);
+    background-image: linear-gradient(rgba(2, 0, 84, 0.42), rgba(0, 0, 0, 0.42)), linear-gradient(to right, rgba(216, 52, 255, 0.42), rgba(10, 132, 255, 0.42));
     background-origin: border-box;
+    
     margin: 0 10px;
     flex: 0 0 auto;
     padding: 15px 45px;
@@ -3047,6 +3048,8 @@ ul li {
     transition: 0.5s;
     background-size: 200% auto;
     color: white;
+    backdrop-filter: blur(10px);
+    border: double 1px transparent;
     border-radius: 10px;
     display: block;
 }
