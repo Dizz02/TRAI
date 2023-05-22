@@ -2971,7 +2971,7 @@ ul li {
 
 /* Add this CSS for responsive styling */
 /* Adjust font sizes for mobile devices */
-@media (max-width: 767px) {
+@media (max-width: 480px) {
     h1,
     h2,
     h3,
@@ -2988,31 +2988,49 @@ ul li {
     }
 }
 
-/* Adjust styles for mobile devices */
-@media (max-width: 360px) {
+/* Adjust styles for small mobile devices */
+@media (max-width: 480px) {
     .main-title {
-        font-size: 24px;
+        font-size: 18px;
     }
 
     .slider {
         margin: 40px 0;
-        height: auto;
-        width: 90%;
-        overflow: hidden;
-        white-space: nowrap;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        justify-content: center; /* Center the slides */
     }
 
+        .slider::-webkit-scrollbar {
+            display: none;
+        }
+
     .slide {
-        margin: 0 0px;
-        width: 90%;
-        display: inline-block;
+        margin: 0 80px;
+        margin-top:15px;
+        flex: 0 0 auto;
+        max-width: 250px; /* Adjust the max-width as per your preference */
         position: relative;
         transition: .4s all;
         border-radius: 10px;
+        color: white;
+        backdrop-filter: blur(10px);
+        border: double 1px transparent;
+        background-image: linear-gradient(#0200546b, #0000006b), linear-gradient(to right, #661dee73, #009dff75);
+        background-origin: border-box;
+        background-clip: content-box, border-box;
     }
 
+        .slide:first-child {
+            margin-left: auto; /* Center the first slide */
+        }
+
     .slide-container {
-        padding: 10px 20px;
+        padding: 10px;
     }
 }
 
