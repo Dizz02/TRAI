@@ -2986,13 +2986,6 @@ ul li {
     ul li {
         font-size: 16px;
     }
-}
-
-/* Adjust styles for small mobile devices */
-@media (max-width: 480px) {
-    .main-title {
-        font-size: 18px;
-    }
 
     .slider {
         margin: 40px 0;
@@ -3002,7 +2995,8 @@ ul li {
         -webkit-overflow-scrolling: touch;
         -ms-overflow-style: none;
         scrollbar-width: none;
-        justify-content: flex-start; /* Center the slides */
+        justify-content: center; /* Center the slides */
+        scroll-snap-type: x mandatory; /* Enable scroll snapping */
     }
 
         .slider::-webkit-scrollbar {
@@ -3010,8 +3004,7 @@ ul li {
         }
 
     .slide {
-        margin: 0 80px;
-        margin-top:15px;
+        margin: 0 10px; /* Adjust the margin as per your preference */
         flex: 0 0 auto;
         max-width: 250px; /* Adjust the max-width as per your preference */
         position: relative;
@@ -3023,16 +3016,14 @@ ul li {
         background-image: linear-gradient(#0200546b, #0000006b), linear-gradient(to right, #661dee73, #009dff75);
         background-origin: border-box;
         background-clip: content-box, border-box;
+        scroll-snap-align: center; /* Snap slides to the center */
     }
-
-        .slide:first-child {
-            margin-left: auto; /* Center the first slide */
-        }
 
     .slide-container {
         padding: 10px;
     }
 }
+
 
 
 
