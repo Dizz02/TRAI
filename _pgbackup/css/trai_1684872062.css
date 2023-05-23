@@ -3,7 +3,7 @@
     --primary-purple-100: #D834FF;
     --primary-blue-100: #0A84FF;
     --primary-green-100: #D834FF;
-    --primary-green-40: #D834FF;
+    --primary-green-40: rgba( 78, 227, 157, 0.4);
     --primary-red-100: #FF496A;
 
     /* Futureswap neutrals */
@@ -340,7 +340,7 @@ body {
 }
 
 .nav-link-name:hover {
-    color: var(--primary-purple-100) !important;
+    color: var(--primary-green-100) !important;
 }
 
 .nav-link-block {
@@ -360,16 +360,12 @@ body {
     text-decoration: none;
 }
 
-
-  
-
-
 .nav-link {
     position: absolute;
     width: 14px;
     margin-bottom: 4px;
     opacity: 0;
-    color: var(--primary-purple-100);
+    color: var(--primary-green-100);
 }
 
 .page-wrap {
@@ -2133,7 +2129,7 @@ li {
     }
 
     .outlined-button:hover {
-        box-shadow: 0 0 0 1px var(--primary-purple-100);
+        box-shadow: 0 0 0 1px var(--primary-green-100);
     }
 
     .nav-menu-container {
@@ -2164,7 +2160,7 @@ li {
 
     .nav-link {
         display: none;
-        color: var(--primary-purple-100);
+        color: var(--primary-green-100);
     }
 
     .s1 {
