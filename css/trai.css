@@ -3118,7 +3118,7 @@ ul li {
 
 .slider-arrow {
     position: absolute;
-    top: 14%;
+    top: 120%;
     transform: translateY(-50%);
     width: 40px;
     height: 40px;
