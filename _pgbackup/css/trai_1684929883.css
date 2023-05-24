@@ -3112,6 +3112,8 @@ ul li {
     }
 }
 
+
+
 .slider-container {
     position: relative;
 }
@@ -3129,15 +3131,8 @@ ul li {
 
 .slider-arrow-left {
     left: 400px;
-    background-image: url('../images/arrowleft.png');
-    background-position: center center;
-    background-size: cover;
 }
 
 .slider-arrow-right {
     right: 400px;
-    background-image: url('../images/arrowright.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
 }

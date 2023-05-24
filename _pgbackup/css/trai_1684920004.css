@@ -355,7 +355,7 @@ body {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    color: var(--neutral-purple-100);
+    color: var(--neutral-white-100);
     line-height: 1;
     text-decoration: none;
 }
@@ -3110,34 +3110,4 @@ ul li {
     .align-content-center.d-flex {
         display: none;
     }
-}
-
-.slider-container {
-    position: relative;
-}
-
-.slider-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
-    background-color: #ccc;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.slider-arrow-left {
-    left: 400px;
-    background-image: url('../images/arrowleft.png');
-    background-position: center center;
-    background-size: cover;
-}
-
-.slider-arrow-right {
-    right: 400px;
-    background-image: url('../images/arrowright.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
 }

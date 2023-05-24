@@ -130,7 +130,30 @@ var Slider = function () {
     var addEvents = function () {
         $(window).resize(recalculateSizes);
         $(document).on('click', '.slide', clickedImage);
+        $('.slider-arrow-left').on('click', slideLeft);
+        $('.slider-arrow-right').on('click', slideRight);
     }
+
+    var slideLeft = function () {
+        var $activeSlide = $('.active');
+        var $prevSlide = $activeSlide.prev('.slide');
+        if ($prevSlide.length) {
+            $activeSlide.removeClass('active');
+            $prevSlide.addClass('active');
+            position();
+        }
+    }
+
+    var slideRight = function () {
+        var $activeSlide = $('.active');
+        var $nextSlide = $activeSlide.next('.slide');
+        if ($nextSlide.length) {
+            $activeSlide.removeClass('active');
+            $nextSlide.addClass('active');
+            position();
+        }
+    }
+
 
     return {
         init: function () {
